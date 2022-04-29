@@ -237,9 +237,9 @@ RectTransform:
   m_Father: {fileID: 553524308}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -100}
+  m_AnchorMin: {x: 0.5, y: 0.4}
+  m_AnchorMax: {x: 0.5, y: 0.4}
+  m_AnchoredPosition: {x: 0, y: -63}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &550688980
@@ -418,10 +418,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1080, y: 1920}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -611,7 +611,7 @@ GameObject:
   - component: {fileID: 1472605035}
   - component: {fileID: 1472605034}
   m_Layer: 5
-  m_Name: FontCredit
+  m_Name: Credits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -633,8 +633,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -60}
-  m_SizeDelta: {x: 300, y: 120}
+  m_AnchoredPosition: {x: 275, y: -60}
+  m_SizeDelta: {x: 550, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1472605034
 MonoBehaviour:
@@ -669,7 +669,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ' Font: Thaleah from Tiny Worlds'
+  m_Text: " Font: \"Thaleah\" from Tiny Worlds - Unity Asset Store\n Music: \"Divide
+    by Zero\" from playonloop.com - CC BY 4.0\n Sound effects: from https://www.zapsplat.com\n
+    Destruction effect: 2D_destruction from Matthew Holtzem"
 --- !u!222 &1472605035
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -4,12 +4,15 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float speed = 1f;
+    public AudioSource audioSource;
+    public AudioClip explosionSound;
 
     private Player player;
 
     private void Awake()
     {
         player = GameObject.FindWithTag("Player").GetComponent<Player>();
+        audioSource = Camera.main.GetComponentInChildren<AudioSource>();
     }
 
     // Update is called once per frame
@@ -26,6 +29,8 @@ public class Bullet : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             // hit enemy, hence increase score
+            audioSource.PlayOneShot(explosionSound, 3f);
+            //other.gameObject.GetComponent<Explodable>().explode();
             Destroy(other.gameObject);
             player.IncreaseScore();
             Destroy(gameObject);
