@@ -670,8 +670,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: " Font: \"Thaleah\" from Tiny Worlds - Unity Asset Store\n Music: \"Divide
-    by Zero\" from playonloop.com - CC BY 4.0\n Sound effects: from https://www.zapsplat.com\n
-    Destruction effect: 2D_destruction from Matthew Holtzem"
+    by Zero\" from playonloop.com - CC BY 4.0\n Sound effects: from https://www.zapsplat.com"
 --- !u!222 &1472605035
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -5144,6 +5144,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5159,6 +5160,22 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21f9452dcb10af344a67fbdf1553bd60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialPosition: {x: 0, y: 0, z: 0}
+  shakeAmount: 0.2
+  rumble: 0
+  decreaseAmount: 7
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -5820,6 +5837,8 @@ MonoBehaviour:
   scoreText: {fileID: 1722267711}
   wonLostPanel: {fileID: 2139721729}
   wonLostText: {fileID: 370202762}
+  wonSound: {fileID: 8300000, guid: f932b3e3705c86745b4fe21569000fbb, type: 3}
+  lostSound: {fileID: 8300000, guid: 995d398fdf1e4844d8994adaebfc1c08, type: 3}
 --- !u!61 &1811302668
 BoxCollider2D:
   m_ObjectHideFlags: 0

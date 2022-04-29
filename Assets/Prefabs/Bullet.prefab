@@ -100,7 +100,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  audioSource: {fileID: 0}
   explosionSound: {fileID: 8300000, guid: a35446a310397cf479cb7d3b1fa26b3b, type: 3}
 --- !u!61 &3801451431007298236
 BoxCollider2D:

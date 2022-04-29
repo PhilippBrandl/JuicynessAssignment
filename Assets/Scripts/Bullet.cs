@@ -4,10 +4,10 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float speed = 1f;
-    public AudioSource audioSource;
     public AudioClip explosionSound;
 
     private Player player;
+    private AudioSource audioSource;
 
     private void Awake()
     {
@@ -30,9 +30,15 @@ public class Bullet : MonoBehaviour
         {
             // hit enemy, hence increase score
             audioSource.PlayOneShot(explosionSound, 3f);
-            //other.gameObject.GetComponent<Explodable>().explode();
-            Destroy(other.gameObject);
+            other.enabled = false;
+            Camera.main.GetComponent<CameraRumble>().rumble = 2f;
+            other.gameObject.GetComponent<Enemy>().fadeOut = true;
+            Destroy(other.gameObject, 1 / other.gameObject.GetComponent<Enemy>().fadeOutSpeed);
             player.IncreaseScore();
+            ParticleSystem particles = transform.GetChild(0).gameObject.GetComponent<ParticleSystem>();
+            particles.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+            this.transform.DetachChildren();
+            Destroy(particles.gameObject, particles.main.startLifetime.constant);
             Destroy(gameObject);
         }
         if (other.CompareTag("Top"))

@@ -12,15 +12,19 @@ public class Player : MonoBehaviour
     //public TMP_Text scoreText;
     public GameObject wonLostPanel;
     public Text wonLostText;
+    public AudioClip wonSound;
+    public AudioClip lostSound;
     //public TMP_Text wonLostText;
 
     private int MaxScore = 0;
-    
+    private AudioSource audioSource;
+
     private void Awake()
     {
         var enemySpawner = GameObject.FindWithTag("EnemySpawner").GetComponent<EnemySpawner>();
         var gridSize = enemySpawner.GridSize;
         MaxScore = gridSize.x * gridSize.y; // enemy count equals maximum score
+        audioSource = Camera.main.GetComponentInChildren<AudioSource>();
     }
 
     private int _score = 0;
@@ -85,12 +89,14 @@ public class Player : MonoBehaviour
 
     public void Won()
     {
+        audioSource.PlayOneShot(wonSound, 3f);
         wonLostPanel.SetActive(true);
         wonLostText.text = "You Won!";
     }
 
     public void Lost()
     {
+        audioSource.PlayOneShot(lostSound, 3f);
         wonLostPanel.SetActive(true);
         wonLostText.text = "You Lost!";
     }

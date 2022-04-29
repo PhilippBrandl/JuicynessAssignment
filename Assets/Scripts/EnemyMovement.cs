@@ -31,11 +31,11 @@ public class EnemyMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Debug.Log($"EnemyMovement - OnTriggerEnter2D: {other.gameObject.name}");
+        //Debug.Log($"EnemyMovement - OnTriggerEnter2D: {other.gameObject.name}");
         if (moveRight && other.gameObject.CompareTag("Right"))
         { // hit right screen bounds collider
-            moveRight = false;
             MoveGridYDown();
+            moveRight = false;
         }
         else if (!moveRight && other.gameObject.CompareTag("Left"))
         { // hit left screen bounds collider
